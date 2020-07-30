@@ -49,7 +49,7 @@ func (c *Connection) Channel() (*Channel, error) {
 					break
 				}
 
-				debugf("channel recreate failed, err: %v", err)
+				logErr("channel recreate failed, err: %v", err)
 			}
 		}
 

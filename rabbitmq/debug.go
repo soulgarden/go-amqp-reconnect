@@ -1,6 +1,6 @@
 package rabbitmq
 
-import "log"
+import "github.com/rs/zerolog/log"
 
 // Debug debug log flag
 var Debug bool
@@ -17,4 +17,8 @@ func debugf(format string, args ...interface{}) {
 		return
 	}
 	log.Printf(format, args...)
+}
+
+func logErr(msg string, err error) {
+	log.Err(err).Msg(msg)
 }
